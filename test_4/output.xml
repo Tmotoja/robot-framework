@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.12.8 on darwin)" generated="2025-04-12T13:25:43.498836" rpa="false" schemaversion="5">
+<suite id="s1" name="Test login" source="/Users/timo/Desktop/tester oprogramowania/robot framework/test_4/Test_login.robot">
+<test id="s1-t1" name="Udane Logowanie" line="12">
+<kw name="Open Browser">
+<msg time="2025-04-12T13:25:43.537693" level="FAIL">No keyword with name 'Open Browser' found.</msg>
+<arg>${LOGIN_URL}</arg>
+<arg>${BROWSER}</arg>
+<status status="FAIL" start="2025-04-12T13:25:43.537638" elapsed="0.000121">No keyword with name 'Open Browser' found.</status>
+</kw>
+<kw name="Wait Until Element Is Visible">
+<arg>id=username</arg>
+<arg>5s</arg>
+<status status="NOT RUN" start="2025-04-12T13:25:43.538022" elapsed="0.000038"/>
+</kw>
+<kw name="Input Text">
+<arg>id=username</arg>
+<arg>${VALID_LOGIN}</arg>
+<status status="NOT RUN" start="2025-04-12T13:25:43.538209" elapsed="0.000025"/>
+</kw>
+<kw name="Input Text">
+<arg>id=password</arg>
+<arg>${VALID_PASSWORD}</arg>
+<status status="NOT RUN" start="2025-04-12T13:25:43.538364" elapsed="0.000020"/>
+</kw>
+<kw name="Click Element">
+<arg>css=.radius</arg>
+<status status="NOT RUN" start="2025-04-12T13:25:43.538504" elapsed="0.000025"/>
+</kw>
+<kw name="Element Should Be Visible">
+<arg>css=Logout</arg>
+<status status="NOT RUN" start="2025-04-12T13:25:43.538644" elapsed="0.000018"/>
+</kw>
+<kw name="Close Browser">
+<status status="NOT RUN" start="2025-04-12T13:25:43.538774" elapsed="0.000018"/>
+</kw>
+<doc>Test sprawdzający udane logowanie</doc>
+<status status="FAIL" start="2025-04-12T13:25:43.536228" elapsed="0.002751">No keyword with name 'Open Browser' found.</status>
+</test>
+<doc>Test logowania do strony</doc>
+<status status="FAIL" start="2025-04-12T13:25:43.500733" elapsed="0.038715"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Test login" id="s1" pass="0" fail="1" skip="0">Test login</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-04-12T13:25:43.535425" level="ERROR">Error in file '/Users/timo/Desktop/tester oprogramowania/robot framework/test_4/Test_login.robot' on line 3: Importing library 'SeleniumLibrary' failed: ModuleNotFoundError: No module named 'SeleniumLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  /Library/Frameworks/Python.framework/Versions/3.12/bin
+  /Library/Frameworks/Python.framework/Versions/3.12/lib/python312.zip
+  /Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12
+  /Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/lib-dynload
+  /Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages</msg>
+</errors>
+</robot>

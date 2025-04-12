@@ -1,35 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2.2 (Python 3.12.8 on darwin)" generated="2025-04-12T11:25:28.336421" rpa="false" schemaversion="5">
-<suite id="s1" name="Len" source="/Users/timo/Desktop/tester oprogramowania/robot framework/test_3/len.robot">
-<test id="s1-t1" name="String Length Test" line="5">
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-04-12T11:25:28.603387" level="INFO">${text} = Hello World!!!</msg>
-<var>${text}</var>
-<arg>Hello World!!!</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-04-12T11:25:28.591009" elapsed="0.030452"/>
+<robot generator="Robot 7.2.2 (Python 3.12.8 on darwin)" generated="2025-04-12T13:38:37.570803" rpa="false" schemaversion="5">
+<suite id="s1" name="Test login" source="/Users/timo/Desktop/tester oprogramowania/robot framework/test_4/Test_login.robot">
+<test id="s1-t1" name="Nieudane Logowanie" line="25">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-04-12T13:38:37.983178" level="INFO">Opening browser 'Chrome' to base url 'https://the-internet.herokuapp.com/login'.</msg>
+<arg>${LOGIN_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-04-12T13:38:37.982259" elapsed="6.061723"/>
 </kw>
-<kw name="Evaluate" owner="BuiltIn">
-<msg time="2025-04-12T11:25:28.639604" level="INFO">${length} = 14</msg>
-<var>${length}</var>
-<arg>len("${text}")</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2025-04-12T11:25:28.634084" elapsed="0.040659"/>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=username</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-12T13:38:44.048424" elapsed="0.052322"/>
 </kw>
-<kw name="Should Be Equal As Numbers" owner="BuiltIn">
-<msg time="2025-04-12T11:25:28.688203" level="INFO">Argument types are:
-&lt;class 'int'&gt;
-&lt;class 'str'&gt;</msg>
-<arg>${length}</arg>
-<arg>14</arg>
-<doc>Fails if objects are unequal after converting them to real numbers.</doc>
-<status status="PASS" start="2025-04-12T11:25:28.685973" elapsed="0.003450"/>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-12T13:38:44.102380" level="INFO">Typing text 'invalid_user' into text field 'id=username'.</msg>
+<arg>id=username</arg>
+<arg>${INVALID_LOGIN}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-12T13:38:44.101699" elapsed="0.376034"/>
 </kw>
-<doc>Testujemy długość tekstu</doc>
-<status status="PASS" start="2025-04-12T11:25:28.571438" elapsed="0.130608"/>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-04-12T13:38:44.479143" level="INFO">Typing text 'invalid_password' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${INVALID_PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-12T13:38:44.478297" elapsed="0.172450"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-04-12T13:38:44.652239" level="INFO">Clicking element 'css=.radius'.</msg>
+<arg>css=.radius</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-04-12T13:38:44.651663" elapsed="0.566381"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-04-12T13:38:45.289513" level="INFO">Element 'css=.flash.error' is displayed.</msg>
+<arg>css=.flash.error</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-04-12T13:38:45.218948" elapsed="0.071276"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-04-12T13:38:45.291767" elapsed="0.514945"/>
+</kw>
+<doc>Niepoprawne logowanie test</doc>
+<status status="PASS" start="2025-04-12T13:38:37.969042" elapsed="7.839245"/>
 </test>
-<doc>Test sprawdzający długość tekstu</doc>
-<status status="PASS" start="2025-04-12T11:25:28.358664" elapsed="0.361489"/>
+<doc>Test logowania do strony</doc>
+<status status="PASS" start="2025-04-12T13:38:37.577924" elapsed="8.232695"/>
 </suite>
 <statistics>
 <total>
@@ -38,7 +58,7 @@
 <tag>
 </tag>
 <suite>
-<stat name="Len" id="s1" pass="1" fail="0" skip="0">Len</stat>
+<stat name="Test login" id="s1" pass="1" fail="0" skip="0">Test login</stat>
 </suite>
 </statistics>
 <errors>
