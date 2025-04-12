@@ -1,57 +1,137 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2.2 (Python 3.12.8 on darwin)" generated="2025-04-12T13:25:43.498836" rpa="false" schemaversion="5">
+<robot generator="Robot 7.2.2 (Python 3.12.8 on darwin)" generated="2025-04-12T14:22:43.008807" rpa="false" schemaversion="5">
 <suite id="s1" name="Test login" source="/Users/timo/Desktop/tester oprogramowania/robot framework/test_4/Test_login.robot">
-<test id="s1-t1" name="Udane Logowanie" line="12">
+<test id="s1-t1" name="Udane Logowanie" line="14">
 <kw name="Open Browser">
-<msg time="2025-04-12T13:25:43.537693" level="FAIL">No keyword with name 'Open Browser' found.</msg>
+<msg time="2025-04-12T14:22:43.056698" level="FAIL">No keyword with name 'Open Browser' found.</msg>
 <arg>${LOGIN_URL}</arg>
 <arg>${BROWSER}</arg>
-<status status="FAIL" start="2025-04-12T13:25:43.537638" elapsed="0.000121">No keyword with name 'Open Browser' found.</status>
+<status status="FAIL" start="2025-04-12T14:22:43.056645" elapsed="0.000116">No keyword with name 'Open Browser' found.</status>
 </kw>
 <kw name="Wait Until Element Is Visible">
 <arg>id=username</arg>
 <arg>5s</arg>
-<status status="NOT RUN" start="2025-04-12T13:25:43.538022" elapsed="0.000038"/>
+<status status="NOT RUN" start="2025-04-12T14:22:43.057014" elapsed="0.000033"/>
 </kw>
 <kw name="Input Text">
 <arg>id=username</arg>
 <arg>${VALID_LOGIN}</arg>
-<status status="NOT RUN" start="2025-04-12T13:25:43.538209" elapsed="0.000025"/>
+<status status="NOT RUN" start="2025-04-12T14:22:43.057196" elapsed="0.000027"/>
 </kw>
 <kw name="Input Text">
 <arg>id=password</arg>
 <arg>${VALID_PASSWORD}</arg>
-<status status="NOT RUN" start="2025-04-12T13:25:43.538364" elapsed="0.000020"/>
+<status status="NOT RUN" start="2025-04-12T14:22:43.057351" elapsed="0.000019"/>
 </kw>
 <kw name="Click Element">
 <arg>css=.radius</arg>
-<status status="NOT RUN" start="2025-04-12T13:25:43.538504" elapsed="0.000025"/>
+<status status="NOT RUN" start="2025-04-12T14:22:43.057490" elapsed="0.000020"/>
 </kw>
 <kw name="Element Should Be Visible">
-<arg>css=Logout</arg>
-<status status="NOT RUN" start="2025-04-12T13:25:43.538644" elapsed="0.000018"/>
+<arg>id:flash</arg>
+<status status="NOT RUN" start="2025-04-12T14:22:43.057629" elapsed="0.000019"/>
 </kw>
 <kw name="Close Browser">
-<status status="NOT RUN" start="2025-04-12T13:25:43.538774" elapsed="0.000018"/>
+<status status="NOT RUN" start="2025-04-12T14:22:43.057770" elapsed="0.000019"/>
 </kw>
 <doc>Test sprawdzający udane logowanie</doc>
-<status status="FAIL" start="2025-04-12T13:25:43.536228" elapsed="0.002751">No keyword with name 'Open Browser' found.</status>
+<status status="FAIL" start="2025-04-12T14:22:43.055157" elapsed="0.002850">No keyword with name 'Open Browser' found.</status>
+</test>
+<test id="s1-t2" name="Nieudane Logowanie" line="25">
+<kw name="Open Browser">
+<msg time="2025-04-12T14:22:43.059693" level="FAIL">No keyword with name 'Open Browser' found.</msg>
+<arg>${LOGIN_URL}</arg>
+<arg>${BROWSER}</arg>
+<status status="FAIL" start="2025-04-12T14:22:43.059645" elapsed="0.000102">No keyword with name 'Open Browser' found.</status>
+</kw>
+<kw name="Wait Until Element Is Visible">
+<arg>id=username</arg>
+<arg>5s</arg>
+<status status="NOT RUN" start="2025-04-12T14:22:43.059949" elapsed="0.000030"/>
+</kw>
+<kw name="Input Text">
+<arg>id=username</arg>
+<arg>${INVALID_LOGIN}</arg>
+<status status="NOT RUN" start="2025-04-12T14:22:43.060122" elapsed="0.000028"/>
+</kw>
+<kw name="Input Text">
+<arg>id=password</arg>
+<arg>${INVALID_PASSWORD}</arg>
+<status status="NOT RUN" start="2025-04-12T14:22:43.060492" elapsed="0.000075"/>
+</kw>
+<kw name="Click Element">
+<arg>css=.radius</arg>
+<status status="NOT RUN" start="2025-04-12T14:22:43.060773" elapsed="0.000026"/>
+</kw>
+<kw name="Element Should Be Visible">
+<arg>css=.flash.error</arg>
+<status status="NOT RUN" start="2025-04-12T14:22:43.060952" elapsed="0.000030"/>
+</kw>
+<kw name="Close Browser">
+<status status="NOT RUN" start="2025-04-12T14:22:43.061122" elapsed="0.000024"/>
+</kw>
+<doc>Niepoprawne logowanie test</doc>
+<status status="FAIL" start="2025-04-12T14:22:43.058515" elapsed="0.002829">No keyword with name 'Open Browser' found.</status>
+</test>
+<test id="s1-t3" name="Udane Wylogowanie" line="36">
+<kw name="Open Browser">
+<msg time="2025-04-12T14:22:43.062416" level="FAIL">No keyword with name 'Open Browser' found.</msg>
+<arg>${LOGIN_URL}</arg>
+<arg>${BROWSER}</arg>
+<status status="FAIL" start="2025-04-12T14:22:43.062385" elapsed="0.000072">No keyword with name 'Open Browser' found.</status>
+</kw>
+<kw name="Wait Until Element Is Visible">
+<arg>id=username</arg>
+<arg>5s</arg>
+<status status="NOT RUN" start="2025-04-12T14:22:43.062628" elapsed="0.000036"/>
+</kw>
+<kw name="Input Text">
+<arg>id=username</arg>
+<arg>${VALID_LOGIN}</arg>
+<status status="NOT RUN" start="2025-04-12T14:22:43.062834" elapsed="0.000036"/>
+</kw>
+<kw name="Input Text">
+<arg>id=password</arg>
+<arg>${VALID_PASSWORD}</arg>
+<status status="NOT RUN" start="2025-04-12T14:22:43.063019" elapsed="0.000022"/>
+</kw>
+<kw name="Click Element">
+<arg>css=.radius</arg>
+<status status="NOT RUN" start="2025-04-12T14:22:43.063220" elapsed="0.000077"/>
+</kw>
+<kw name="Element Should Be Visible">
+<arg>id:flash</arg>
+<status status="NOT RUN" start="2025-04-12T14:22:43.063454" elapsed="0.000030"/>
+</kw>
+<kw name="Click Element">
+<arg>locator= css=.icon-2x.icon-signout</arg>
+<status status="NOT RUN" start="2025-04-12T14:22:43.063621" elapsed="0.000025"/>
+</kw>
+<kw name="Element Should Be Visible">
+<arg>locator= css=.icon-2x.icon-signout</arg>
+<status status="NOT RUN" start="2025-04-12T14:22:43.063780" elapsed="0.000020"/>
+</kw>
+<kw name="Close Browser">
+<status status="NOT RUN" start="2025-04-12T14:22:43.063901" elapsed="0.000021"/>
+</kw>
+<doc>Test sprawdzający udane wylogowanie</doc>
+<status status="FAIL" start="2025-04-12T14:22:43.061581" elapsed="0.002550">No keyword with name 'Open Browser' found.</status>
 </test>
 <doc>Test logowania do strony</doc>
-<status status="FAIL" start="2025-04-12T13:25:43.500733" elapsed="0.038715"/>
+<status status="FAIL" start="2025-04-12T14:22:43.010616" elapsed="0.053929"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="0" fail="3" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="Test login" id="s1" pass="0" fail="1" skip="0">Test login</stat>
+<stat name="Test login" id="s1" pass="0" fail="3" skip="0">Test login</stat>
 </suite>
 </statistics>
 <errors>
-<msg time="2025-04-12T13:25:43.535425" level="ERROR">Error in file '/Users/timo/Desktop/tester oprogramowania/robot framework/test_4/Test_login.robot' on line 3: Importing library 'SeleniumLibrary' failed: ModuleNotFoundError: No module named 'SeleniumLibrary'
+<msg time="2025-04-12T14:22:43.054306" level="ERROR">Error in file '/Users/timo/Desktop/tester oprogramowania/robot framework/test_4/Test_login.robot' on line 3: Importing library 'SeleniumLibrary' failed: ModuleNotFoundError: No module named 'SeleniumLibrary'
 Traceback (most recent call last):
   None
 PYTHONPATH:
