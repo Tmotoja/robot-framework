@@ -1,16 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2.2 (Python 3.12.8 on darwin)" generated="2025-04-13T10:14:02.145162" rpa="false" schemaversion="5">
-<suite id="s1" name="API test" source="/Users/timo/Desktop/tester oprogramowania/robot framework/Testowanie API/API test.robot">
-<test id="s1-t1" name="Przykladowy GET na API" line="6">
-<kw name="GET" owner="RequestsLibrary">
-<msg time="2025-04-13T10:14:02.521430" level="INFO">GET Request : url=https://jsonplaceholder.typicode.com/posts/1 
+<robot generator="Robot 7.2.2 (Python 3.12.8 on darwin)" generated="2025-04-13T11:46:25.635835" rpa="false" schemaversion="5">
+<suite id="s1" name="Session" source="/Users/timo/Desktop/tester oprogramowania/robot framework/Testowanie API/session.robot">
+<test id="s1-t1" name="Test z uzyciem Create session" line="6">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2025-04-13T11:46:25.963673" level="INFO">Creating Session using : alias=jsonplaceholder, url=https://jsonplaceholder.typicode.com, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>jsonplaceholder</arg>
+<arg>https://jsonplaceholder.typicode.com</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2025-04-13T11:46:25.963464" elapsed="0.000561"/>
+</kw>
+<kw name="Get Request" owner="RequestsLibrary">
+<msg time="2025-04-13T11:46:25.964336" level="WARN">Keyword 'RequestsLibrary.Get Request' is deprecated. Please use `GET On Session` instead.</msg>
+<msg time="2025-04-13T11:46:26.096141" level="INFO">GET Request : url=https://jsonplaceholder.typicode.com/posts/1 
  path_url=/posts/1 
  headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
  body=None 
  </msg>
-<msg time="2025-04-13T10:14:02.521857" level="INFO">GET Response : url=https://jsonplaceholder.typicode.com/posts/1 
+<msg time="2025-04-13T11:46:26.096364" level="INFO">GET Response : url=https://jsonplaceholder.typicode.com/posts/1 
  status=200, reason=OK 
- headers={'Date': 'Sun, 13 Apr 2025 08:14:02 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1744440477&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;s=Sqr3ibwZ8mq%2BZVWUR3kn%2FGvxV5knNXAhsS9RX1rNZuE%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1744440477&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;s=Sqr3ibwZ8mq%2BZVWUR3kn%2FGvxV5knNXAhsS9RX1rNZuE%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'X-Powered-By': 'Express', 'X-Ratelimit-Limit': '1000', 'X-Ratelimit-Remaining': '999', 'X-Ratelimit-Reset': '1744440517', 'Vary': 'Origin, Accept-Encoding', 'Access-Control-Allow-Credentials': 'true', 'Cache-Control': 'max-age=43200', 'Pragma': 'no-cache', 'Expires': '-1', 'X-Content-Type-Options': 'nosniff', 'Etag': 'W/"124-yiKdLzqO5gfBrJFrcdJ8Yq0LGnU"', 'Via': '1.1 vegur', 'CF-Cache-Status': 'HIT', 'Age': '5127', 'Server': 'cloudflare', 'CF-RAY': '92f981f24bc862c5-HAM', 'Content-Encoding': 'gzip', 'alt-svc': 'h3=":443"; ma=86400', 'server-timing': 'cfL4;desc="?proto=TCP&amp;rtt=30695&amp;min_rtt=26757&amp;rtt_var=12847&amp;sent=5&amp;recv=6&amp;lost=0&amp;retrans=0&amp;sent_bytes=2841&amp;recv_bytes=785&amp;delivery_rate=151138&amp;cwnd=101&amp;unsent_bytes=0&amp;cid=a0825afaca6d0372&amp;ts=57&amp;x=0"'} 
+ headers={'Date': 'Sun, 13 Apr 2025 09:46:26 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1744440477&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;s=Sqr3ibwZ8mq%2BZVWUR3kn%2FGvxV5knNXAhsS9RX1rNZuE%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1744440477&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;s=Sqr3ibwZ8mq%2BZVWUR3kn%2FGvxV5knNXAhsS9RX1rNZuE%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'X-Powered-By': 'Express', 'X-Ratelimit-Limit': '1000', 'X-Ratelimit-Remaining': '999', 'X-Ratelimit-Reset': '1744440517', 'Vary': 'Origin, Accept-Encoding', 'Access-Control-Allow-Credentials': 'true', 'Cache-Control': 'max-age=43200', 'Pragma': 'no-cache', 'Expires': '-1', 'X-Content-Type-Options': 'nosniff', 'Etag': 'W/"124-yiKdLzqO5gfBrJFrcdJ8Yq0LGnU"', 'Via': '1.1 vegur', 'CF-Cache-Status': 'HIT', 'Age': '10671', 'Server': 'cloudflare', 'CF-RAY': '92fa0949ebaa62bb-HAM', 'Content-Encoding': 'gzip', 'alt-svc': 'h3=":443"; ma=86400', 'server-timing': 'cfL4;desc="?proto=TCP&amp;rtt=28148&amp;min_rtt=27995&amp;rtt_var=10805&amp;sent=5&amp;recv=6&amp;lost=0&amp;retrans=0&amp;sent_bytes=2841&amp;recv_bytes=785&amp;delivery_rate=138374&amp;cwnd=80&amp;unsent_bytes=0&amp;cid=1c5dc066f2569701&amp;ts=51&amp;x=0"'} 
  body={
   "userId": 1,
   "id": 1,
@@ -18,37 +26,29 @@
   "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
 } 
  </msg>
-<msg time="2025-04-13T10:14:02.522493" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<msg time="2025-04-13T11:46:26.096484" level="INFO">/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages/urllib3/connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'jsonplaceholder.typicode.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(</msg>
+<msg time="2025-04-13T11:46:26.096746" level="INFO">${response} = &lt;Response [200]&gt;</msg>
 <var>${response}</var>
-<arg>https://jsonplaceholder.typicode.com/posts/1</arg>
-<doc>Sends a GET request.</doc>
-<status status="PASS" start="2025-04-13T10:14:02.370564" elapsed="0.152069"/>
+<arg>jsonplaceholder</arg>
+<arg>/posts/1</arg>
+<doc>*DEPRECATED* Please use `GET On Session` instead.</doc>
+<status status="PASS" start="2025-04-13T11:46:25.964273" elapsed="0.132580"/>
 </kw>
 <kw name="Should Be Equal As Integers" owner="BuiltIn">
-<msg time="2025-04-13T10:14:02.524436" level="INFO">Argument types are:
+<msg time="2025-04-13T11:46:26.098130" level="INFO">Argument types are:
 &lt;class 'int'&gt;
 &lt;class 'str'&gt;</msg>
 <arg>${response.status_code}</arg>
 <arg>200</arg>
 <doc>Fails if objects are unequal after converting them to integers.</doc>
-<status status="PASS" start="2025-04-13T10:14:02.523338" elapsed="0.001242"/>
+<status status="PASS" start="2025-04-13T11:46:26.097261" elapsed="0.001024"/>
 </kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2025-04-13T10:14:02.525912" level="INFO">{
-  "userId": 1,
-  "id": 1,
-  "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
-  "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
-}</msg>
-<arg>${response.text}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-04-13T10:14:02.525043" elapsed="0.000967"/>
-</kw>
-<doc>Przykład GET na API</doc>
-<status status="PASS" start="2025-04-13T10:14:02.368951" elapsed="0.157406"/>
+<doc>Test z create Session</doc>
+<status status="PASS" start="2025-04-13T11:46:25.962485" elapsed="0.136020"/>
 </test>
-<doc>Pierwszy test API</doc>
-<status status="PASS" start="2025-04-13T10:14:02.147119" elapsed="0.379970"/>
+<doc>Wkorzystanie Create Session</doc>
+<status status="PASS" start="2025-04-13T11:46:25.638056" elapsed="0.460914"/>
 </suite>
 <statistics>
 <total>
@@ -57,9 +57,10 @@
 <tag>
 </tag>
 <suite>
-<stat name="API test" id="s1" pass="1" fail="0" skip="0">API test</stat>
+<stat name="Session" id="s1" pass="1" fail="0" skip="0">Session</stat>
 </suite>
 </statistics>
 <errors>
+<msg time="2025-04-13T11:46:25.964336" level="WARN">Keyword 'RequestsLibrary.Get Request' is deprecated. Please use `GET On Session` instead.</msg>
 </errors>
 </robot>
