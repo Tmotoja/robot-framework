@@ -1,45 +1,92 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2.2 (Python 3.12.8 on darwin)" generated="2025-04-13T13:51:10.825947" rpa="false" schemaversion="5">
-<suite id="s1" name="DELETE" source="/Users/timo/Desktop/tester oprogramowania/robot framework/Testowanie API/Testowanie API 2.robot/DELETE.robot">
-<test id="s1-t1" name="Usuwanie istniejacego posta (DELETE)" line="7">
-<kw name="DELETE" owner="RequestsLibrary">
-<msg time="2025-04-13T13:51:12.049046" level="INFO">DELETE Request : url=https://jsonplaceholder.typicode.com/posts/1 
- path_url=/posts/1 
- headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '0'} 
+<robot generator="Robot 7.2.2 (Python 3.12.8 on darwin)" generated="2025-04-13T14:36:09.873963" rpa="false" schemaversion="5">
+<suite id="s1" name="Test dane uzytkownika" source="/Users/timo/Desktop/tester oprogramowania/robot framework/Testowanie API/Testowanie API 2.robot/Test_dane_uzytkownika.robot">
+<test id="s1-t1" name="Dane uzytkownika Id:5" line="7">
+<kw name="GET" owner="RequestsLibrary">
+<msg time="2025-04-13T14:36:10.473911" level="INFO">GET Request : url=https://jsonplaceholder.typicode.com/users/5 
+ path_url=/users/5 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
  body=None 
  </msg>
-<msg time="2025-04-13T13:51:12.053960" level="INFO">DELETE Response : url=https://jsonplaceholder.typicode.com/posts/1 
+<msg time="2025-04-13T14:36:10.478106" level="INFO">GET Response : url=https://jsonplaceholder.typicode.com/users/5 
  status=200, reason=OK 
- headers={'Date': 'Sun, 13 Apr 2025 11:51:12 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '2', 'Connection': 'keep-alive', 'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1744545071&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;s=jFoSZJI%2F0lcEpphSvWwRaU3Pr7gdXmjlebnB2Ok8nos%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1744545071&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;s=jFoSZJI%2F0lcEpphSvWwRaU3Pr7gdXmjlebnB2Ok8nos%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'X-Powered-By': 'Express', 'X-Ratelimit-Limit': '1000', 'X-Ratelimit-Remaining': '999', 'X-Ratelimit-Reset': '1744545116', 'Vary': 'Origin, Accept-Encoding', 'Access-Control-Allow-Credentials': 'true', 'Cache-Control': 'no-cache', 'Pragma': 'no-cache', 'Expires': '-1', 'X-Content-Type-Options': 'nosniff', 'Etag': 'W/"2-vyGp6PvFo4RvsFtPoIWeCReyIC8"', 'Via': '1.1 vegur', 'cf-cache-status': 'DYNAMIC', 'Server': 'cloudflare', 'CF-RAY': '92fac009cd2c7272-HAM', 'alt-svc': 'h3=":443"; ma=86400', 'server-timing': 'cfL4;desc="?proto=TCP&amp;rtt=28831&amp;min_rtt=27689&amp;rtt_var=12668&amp;sent=5&amp;recv=6&amp;lost=0&amp;retrans=0&amp;sent_bytes=2840&amp;recv_bytes=807&amp;delivery_rate=109807&amp;cwnd=126&amp;unsent_bytes=0&amp;cid=51afa62695fcc04e&amp;ts=564&amp;x=0"'} 
- body={} 
+ headers={'Date': 'Sun, 13 Apr 2025 12:36:10 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1744547553&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;s=MeKFjXOS3at2smqEJDuHah%2FXW3P1Zd087ziaRZ2jA2k%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1744547553&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;s=MeKFjXOS3at2smqEJDuHah%2FXW3P1Zd087ziaRZ2jA2k%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'X-Powered-By': 'Express', 'X-Ratelimit-Limit': '1000', 'X-Ratelimit-Remaining': '999', 'X-Ratelimit-Reset': '1744547576', 'Vary': 'Origin, Accept-Encoding', 'Access-Control-Allow-Credentials': 'true', 'Cache-Control': 'max-age=43200', 'Pragma': 'no-cache', 'Expires': '-1', 'X-Content-Type-Options': 'nosniff', 'Etag': 'W/"1fb-gmS8Go1GsKpTWscwm+5AFpuro+k"', 'Via': '1.1 vegur', 'CF-Cache-Status': 'HIT', 'Age': '217', 'Server': 'cloudflare', 'CF-RAY': '92fb01edeb31caad-HAM', 'Content-Encoding': 'gzip', 'alt-svc': 'h3=":443"; ma=86400', 'server-timing': 'cfL4;desc="?proto=TCP&amp;rtt=65899&amp;min_rtt=47245&amp;rtt_var=31041&amp;sent=5&amp;recv=6&amp;lost=0&amp;retrans=0&amp;sent_bytes=2840&amp;recv_bytes=785&amp;delivery_rate=85596&amp;cwnd=103&amp;unsent_bytes=0&amp;cid=da2c6b1c66fc3f8c&amp;ts=91&amp;x=0"'} 
+ body={
+  "id": 5,
+  "name": "Chelsey Dietrich",
+  "username": "Kamren",
+  "email": "Lucio_Hettinger@annie.ca",
+  "address": {
+    "street": "Skiles Walks",
+    "suite": "Suite 351",
+    "city": "Roscoeview",
+    "zipcode": "33263",
+    "geo": {
+      "lat": "-31.8129",
+      "lng": "62.5342"
+    }
+  },
+  "phone": "(254)954-1289",
+  "website": "demarco.info",
+  "company": {
+    "name": "Keebler LLC",
+    "catchPhrase": "User-centric fault-tolerant solution",
+    "bs": "revolutionize end-to-end systems"
+  }
+} 
  </msg>
-<msg time="2025-04-13T13:51:12.054794" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<msg time="2025-04-13T14:36:10.479136" level="INFO">${response} = &lt;Response [200]&gt;</msg>
 <var>${response}</var>
-<arg>https://jsonplaceholder.typicode.com/posts/1</arg>
-<doc>Sends a DELETE request.</doc>
-<status status="PASS" start="2025-04-13T13:51:11.377900" elapsed="0.677284"/>
-</kw>
-<kw name="Should Be Equal As Integers" owner="BuiltIn">
-<msg time="2025-04-13T13:51:12.061380" level="INFO">Argument types are:
-&lt;class 'int'&gt;
-&lt;class 'str'&gt;</msg>
-<arg>${response.status_code}</arg>
-<arg>200</arg>
-<doc>Fails if objects are unequal after converting them to integers.</doc>
-<status status="PASS" start="2025-04-13T13:51:12.057102" elapsed="0.005053"/>
+<arg>https://jsonplaceholder.typicode.com/users/5</arg>
+<doc>Sends a GET request.</doc>
+<status status="PASS" start="2025-04-13T14:36:10.194027" elapsed="0.285633"/>
 </kw>
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-04-13T13:51:12.067632" level="INFO">${deleted} = {}</msg>
-<var>${deleted}</var>
+<msg time="2025-04-13T14:36:10.489884" level="INFO">${dane} = {'id': 5, 'name': 'Chelsey Dietrich', 'username': 'Kamren', 'email': 'Lucio_Hettinger@annie.ca', 'address': {'street': 'Skiles Walks', 'suite': 'Suite 351', 'city': 'Roscoeview', 'zipcode': '33263', '...</msg>
+<var>${dane}</var>
 <arg>${response.json()}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-04-13T13:51:12.064190" elapsed="0.004908"/>
+<status status="PASS" start="2025-04-13T14:36:10.482931" elapsed="0.009092"/>
 </kw>
-<doc>wysyla DELETE aby usunac post i sprawdzic odpowiedz</doc>
-<status status="PASS" start="2025-04-13T13:51:11.369842" elapsed="0.700272"/>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2025-04-13T14:36:10.496113" level="INFO">${address} = {'street': 'Skiles Walks', 'suite': 'Suite 351', 'city': 'Roscoeview', 'zipcode': '33263', 'geo': {'lat': '-31.8129', 'lng': '62.5342'}}</msg>
+<var>${address}</var>
+<arg>${dane}[address]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2025-04-13T14:36:10.494670" elapsed="0.001802"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<msg time="2025-04-13T14:36:10.598660" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${dane}[id]</arg>
+<arg>5</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-04-13T14:36:10.497038" elapsed="0.101966"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${dane}[name]</arg>
+<arg>Chelsey Dietrich</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-04-13T14:36:10.604350" elapsed="0.000833"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${dane}[username]</arg>
+<arg>Kamren</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-04-13T14:36:10.607770" elapsed="0.004160"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${address}[zipcode]</arg>
+<arg>33263</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2025-04-13T14:36:10.613608" elapsed="0.001137"/>
+</kw>
+<doc>wysyla GET aby pobrac dane uzytkownika o id 5 i sprawdzic odpowiedz</doc>
+<status status="PASS" start="2025-04-13T14:36:10.192437" elapsed="0.424005"/>
 </test>
-<doc>Testowanie funkcji DELETE</doc>
-<status status="PASS" start="2025-04-13T13:51:10.838162" elapsed="1.234445"/>
+<doc>Testujemy dane uzytkownika o id 5</doc>
+<status status="PASS" start="2025-04-13T14:36:09.885460" elapsed="0.734110"/>
 </suite>
 <statistics>
 <total>
@@ -48,7 +95,7 @@
 <tag>
 </tag>
 <suite>
-<stat name="DELETE" id="s1" pass="1" fail="0" skip="0">DELETE</stat>
+<stat name="Test dane uzytkownika" id="s1" pass="1" fail="0" skip="0">Test dane uzytkownika</stat>
 </suite>
 </statistics>
 <errors>
